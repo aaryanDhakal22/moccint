@@ -36,9 +36,9 @@ for index, records in study.items():
     similarity = nlp_answers.similarity(nlp_user_answers)
 
     if float(similarity) > 0.9:
-        print("%sPASSED%s" % (fg(2), attr(1)), similarity)
+        print("%sPASSED%s" %(fg(2), attr(0)), similarity)
     else:
-        print("%sFAILED%s" % (fg(1), attr(0)), similarity)
+        print("%sFAILED%s" %(fg(1), attr(0)), similarity)
 
     print("Q : " + question + "\n")
     print("A : " + answer + "\n")
